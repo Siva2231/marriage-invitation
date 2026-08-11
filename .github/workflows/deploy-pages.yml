@@ -2,7 +2,9 @@ name: Deploy invitation to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - cursor/build-wedding-invitation-240b
   workflow_dispatch:
 
 permissions:
