@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - cursor/build-wedding-invitation-240b
   workflow_dispatch:
 
 permissions:
