@@ -321,23 +321,42 @@ a {
 
 .blessing {
   overflow: hidden;
+  text-align: center;
   background:
-    radial-gradient(circle at 10% 20%, rgba(199, 154, 69, 0.08), transparent 22%),
-    radial-gradient(circle at 90% 80%, rgba(156, 83, 104, 0.1), transparent 24%),
+    radial-gradient(circle at 14% 18%, rgba(199, 154, 69, 0.09), transparent 26%),
+    radial-gradient(circle at 90% 86%, rgba(156, 83, 104, 0.07), transparent 23%),
     var(--ivory);
 }
 
-.couple-card {
-  display: grid;
-  grid-template-columns: 1fr 100px 1fr;
-  align-items: center;
-  max-width: 1000px;
+.joyful-intro {
+  max-width: 880px;
+  margin: 0 auto 75px;
+}
+
+.joyful-intro .eyebrow {
+  margin-bottom: 24px;
+  color: var(--rose);
+}
+
+.joyful-intro h2 {
+  margin-bottom: 28px;
+  font-size: clamp(3.6rem, 7vw, 6.2rem);
+  font-weight: 600;
+}
+
+.joyful-intro > p:last-child {
   margin: auto;
-  padding: 55px 45px;
-  border: 1px solid rgba(199, 154, 69, 0.45);
-  background: rgba(255, 255, 255, 0.54);
-  box-shadow: 0 22px 70px rgba(79, 34, 46, 0.08);
-  text-align: center;
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  line-height: 1.65;
+}
+
+.couple-names {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: clamp(25px, 5vw, 70px);
+  align-items: center;
+  max-width: 1120px;
+  margin: auto;
 }
 
 .role {
@@ -350,7 +369,6 @@ a {
   text-transform: uppercase;
 }
 
-.couple-card h3,
 .detail-card h3 {
   margin: 0 0 8px;
   color: var(--wine);
@@ -358,113 +376,72 @@ a {
   font-weight: 600;
 }
 
-.couple-card article > span {
-  font-family: var(--sans);
-  font-size: 0.64rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.honorific {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 600;
 }
 
-.couple-card article > p:last-child {
-  font-size: 1.05rem;
-  line-height: 1.6;
+.person h3 {
+  margin: 0 0 12px;
+  color: var(--wine);
+  font-size: clamp(2.4rem, 4.6vw, 4.1rem);
+  font-weight: 600;
+  line-height: 1;
 }
 
-.line {
-  width: 38px;
-  height: 1px;
-  margin: 22px auto;
-  background: var(--gold);
-}
-
-.rings {
-  position: relative;
-  width: 75px;
-  height: 45px;
-  margin: auto;
-}
-
-.rings i {
-  position: absolute;
-  width: 42px;
-  height: 42px;
-  border: 3px double var(--gold);
-  border-radius: 50%;
-}
-
-.rings i:first-child {
-  left: 4px;
-}
-
-.rings i:last-child {
-  right: 4px;
-}
-
-.photo-story {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(300px, 1.1fr);
-  gap: clamp(45px, 8vw, 110px);
-  align-items: center;
-  max-width: 1180px;
-  margin: auto;
-}
-
-.story-photo {
-  position: relative;
+.person > p:last-child {
   margin: 0;
-  padding: 13px;
-  border: 1px solid rgba(199, 154, 69, 0.5);
-  background: var(--ivory);
-  box-shadow: 0 25px 70px rgba(63, 20, 32, 0.14);
+  font-size: 1.05rem;
+  line-height: 1.55;
 }
 
-.story-photo::before {
+.name-ampersand {
+  color: var(--gold);
+  font-size: clamp(4rem, 7vw, 6.5rem);
+  line-height: 1;
+}
+
+.promise-photo {
+  position: relative;
+  height: clamp(390px, 54vw, 720px);
+  overflow: hidden;
+  background: var(--wine-dark);
+}
+
+.promise-photo::after {
   position: absolute;
-  z-index: -1;
-  top: 34px;
-  right: -30px;
-  bottom: -30px;
-  left: 34px;
-  border: 1px solid rgba(156, 83, 104, 0.35);
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(31, 5, 13, 0.75), transparent 52%),
+    linear-gradient(90deg, rgba(31, 5, 13, 0.18), transparent 35%, rgba(31, 5, 13, 0.18));
   content: "";
 }
 
-.story-photo img {
-  display: block;
+.promise-photo img {
+  position: absolute;
   width: 100%;
-  aspect-ratio: 2 / 3;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center 46%;
 }
 
-.story-photo figcaption {
-  padding: 15px 8px 4px;
-  color: var(--rose);
-  font-size: 1rem;
+.promise-photo blockquote {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 38px;
+  left: 20px;
+  margin: 0;
+  color: white;
+  font-size: clamp(1.8rem, 4.4vw, 3.6rem);
   font-style: italic;
-  letter-spacing: 0.06em;
+  font-weight: 600;
+  line-height: 1;
   text-align: center;
-}
-
-.story-copy {
-  max-width: 540px;
-}
-
-.story-copy .eyebrow {
-  color: var(--rose);
-}
-
-.story-copy > p:last-of-type {
-  font-size: 1.2rem;
-  line-height: 1.7;
-}
-
-.story-signature {
-  display: block;
-  margin-top: 28px;
-  color: var(--gold);
-  font-family: var(--script);
-  font-size: 3.3rem;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.75);
 }
 
 .countdown-section {
@@ -734,33 +711,33 @@ a {
     padding: 80px 20px;
   }
 
-  .couple-card {
+  .joyful-intro {
+    margin-bottom: 55px;
+  }
+
+  .couple-names {
     grid-template-columns: 1fr;
-    padding: 45px 20px;
+    gap: 24px;
   }
 
-  .rings {
-    margin: 30px auto;
+  .name-ampersand {
+    font-size: 4rem;
   }
 
-  .photo-story {
-    grid-template-columns: 1fr;
-    gap: 60px;
+  .person h3 {
+    font-size: clamp(2.4rem, 12vw, 3.5rem);
   }
 
-  .story-photo {
-    width: min(100%, 430px);
-    margin: auto;
+  .promise-photo {
+    height: min(74svh, 620px);
   }
 
-  .story-photo::before {
-    right: -12px;
-    bottom: -18px;
-    left: 24px;
+  .promise-photo img {
+    object-position: center;
   }
 
-  .story-copy {
-    text-align: center;
+  .promise-photo blockquote {
+    bottom: 30px;
   }
 
   .countdown-section {
